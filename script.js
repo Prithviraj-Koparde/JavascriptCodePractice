@@ -25,4 +25,13 @@ console.log(d);
 // }
 let d = 10; // ReferenceError: Cannot access 'd' before initialization error ayega because d is in TDZ
 
+// e being hoisted will be like this declare part will be on the top
+// var e = undefined; <-- var dont have tdz let and const has
+// Hoisting of variables - ye vo part hai jisme variable tdz me hota hai but uska memory allocation ho chuka hota hai.
+                           // vo kaise kyu ki jab variable declare and initialize hota hai uske 2 part hoo jate hai 
+                           // like this var a = 10; this will get seperated as var a; and a = 10;
+                           // so var always goes into hoisting phase
 
+console.log.e; // undefined because e is hoisted                        
+var e = 10;
+// e=10; // and initiallize part will go down 
