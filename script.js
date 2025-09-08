@@ -16,3 +16,13 @@ a = 20; // this is called reassignment
 
 b = 10; // this is called initialization
 b = 20; // this is called reassignment
+
+// Temporal Dead Zone (TDZ) - ye vo area hai jisme js ko malum hota hai ki agla variable kya declare huva hai but vo use access nahi kar sakta.
+// TDZ is the time between the entering of the scope and the actual declaration of the variable.
+
+console.log(d);
+// }        // this is tdz for d
+// }
+let d = 10; // ReferenceError: Cannot access 'd' before initialization error ayega because d is in TDZ
+
+
