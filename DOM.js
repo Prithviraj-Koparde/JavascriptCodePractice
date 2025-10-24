@@ -64,3 +64,54 @@ let para = document.querySelector("p") // .classList.add("dec")
 para.classList.add("dec")                   // here dec is inner style in html file which is created inside style tag
 // para.classList.remove("dec")             // remove will remove the style from para variable
 // para.classList.toggle("dec")             // toggle ek to existing style enable hoga to use disable karega aur disable hoga to enable karega 
+
+
+// ---------------------------------------------------------------------------------------------------//
+
+// Create a new list item <li> New Task </li> and add it to the end of ul
+
+let ul = document.querySelector("ul");
+let li = document.createElement("li");
+li.textContent = "New Task"
+ul.appendChild(li)
+
+// Create a new image element with a placeholder source and add it to the top of div
+
+
+let img = document.createElement("img")
+img.setAttribute("src", "https://images.pexels.com/photos/34192085/pexels-photo-34192085.jpeg")
+
+document.querySelector("div").prepend(img)
+img.classList.add("placeHolder")
+
+
+
+// Select a first item in a list and delete it from the DOM
+
+// let ul = document.queryselector("ul")
+let li2 = document.querySelector("li")
+ul.removeChild(li2)
+
+
+// add class highlight to every even li of list in ul 
+
+let li3 = document.querySelectorAll("ul li:nth-child(2n)")          // vvip
+
+li3.forEach(element => {
+    element.classList.add("highlight")
+});
+
+
+// add a class active to a button on click use classList.toggle()
+
+let btn = document.querySelector("button")
+btn.addEventListener("click", () => btn.classList.toggle("active"))
+
+// set the size of all li elements in ul to 18px using .style
+
+let li4 = document.querySelectorAll("li")
+// console.log(li4)
+li4.style.fontSize = "18px"
+li4.forEach(val => {
+    val.style.fontSize = "18px"
+})
