@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="EventListner.css">
 </head>
+
 <body>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, rerum!</p>
 
     <input type="text" placeholder="Enter Name" minlength="3" maxlength="20">
     <input type="text" id="second-input" placeholder="Enter Surname" minlength="0" maxlength="30">
 
+
+    <h1 id="title">Select a device</h1>
+    <select name="select" id="select-device">
+        <option selected disabled>Choose your device</option>
+        <option value="samsung">Samsung</option>
+        <option value="motorola">Motorola</option>
+        <option value="vivo">Vivo</option>
+        <option value="mi">Mi</option>
+        <option value="iphone">Iphone</option>
+    </select>
+
+
+    <div id="text-input">
+        <h1>1</h1>
+    </div>
+
+    <div id="File-selector">
+        <input type="file" id="choose-file">
+        <button id="btn">Upload file</button>
+    </div>
+
     <script src="EventListner.js"></script>
 </body>
+
 </html>

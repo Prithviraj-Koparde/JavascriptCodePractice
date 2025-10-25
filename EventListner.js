@@ -36,3 +36,41 @@ inp2.addEventListener("input", elem => {
         console.log(elem.data)
     }
 })
+
+// change field             - its a event which fires when something takes changes in selection field
+
+let sel = document.querySelector("#select-device")
+let title = document.querySelector("#title")
+
+sel.addEventListener("change", function (val) {
+    title.textContent = `${val.target.value} Device Selected`
+    console.log(val.target.value)
+})
+
+
+
+// to add user enter keys on window screen
+
+let h1 = document.querySelector("#text-input h1")
+window.addEventListener("keydown", function (val) {
+    if (val.key === " ") {
+        h1.textContent = "spc"
+    }
+    else {
+        h1.textContent = val.key
+    }
+})
+
+// upload file working button
+
+let btn = document.querySelector("#btn")
+let file = document.querySelector("#choose-file")
+
+btn.addEventListener("click", () => {
+    file.click()
+})
+
+file.addEventListener("change", (val) => {
+    btn.textContent = val.target.files[0].name
+    // console.log(val.target.files[0].name)
+})
