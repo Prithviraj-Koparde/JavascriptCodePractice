@@ -74,3 +74,114 @@ file.addEventListener("change", (val) => {
     btn.textContent = val.target.files[0].name
     // console.log(val.target.files[0].name)
 })
+
+// second upload button
+
+let btn2 = document.querySelector("#btn-2")
+let choose2 = document.querySelector("#choose-file-2")
+
+btn2.addEventListener("click", () => {
+    choose2.click()
+})
+
+choose2.addEventListener("change", (val) => {
+    let file = val.target.files[0]
+    // console.log(val.target.files[0].name)
+    if (file) {
+        btn2.textContent = file.name
+    }
+})
+
+// making a submit form on submit displays a card
+
+let form = document.querySelector("#form")
+let input = document.querySelectorAll("#form input")        // to select all input tags in form
+let main = document.querySelector("#form-div")
+
+form.addEventListener("submit", val => {
+    val.preventDefault()                // this is done to stop refresh of page when submit is clicked
+    // console.log(input)
+    // console.log(input[0].value, input[1].value, input[2].value, input[3].value)
+
+    let card = document.createElement("div")
+    card.classList.add("card")
+
+    let profile = document.createElement("div")
+    profile.classList.add("profile")
+
+    let img = document.createElement("img")
+    img.setAttribute("src", input[0].value)
+
+    let h1 = document.createElement("h1")
+    h1.textContent = input[1].value
+
+    let h2 = document.createElement("h2")
+    h2.textContent = input[2].value
+
+    let p = document.createElement("p")
+    p.textContent = input[3].value
+
+    profile.appendChild(img)
+    card.appendChild(profile)
+    card.appendChild(h1)
+    card.appendChild(h2)
+    card.appendChild(p)
+
+    main.appendChild(card)
+
+    input.forEach(inp => {              // clearing the form after each submit
+        if (inp.type !== "submit") {      // inp ka type "submit" nahi hona chaiye agar nahi hai to if loop chalao
+            inp.value = ""              // inp.value is set to "" that means blank
+        }
+
+    })
+})
+
+
+// making another submit form which displays cards
+
+let form2 = document.querySelector("#form-2")
+let inputs = document.querySelectorAll("#form-2 input")
+let formMain = document.querySelector(".form-div-2")
+
+form2.addEventListener("submit", val => {
+    val.preventDefault()
+
+    // console.log(inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value,inputs[5].value)
+
+    let card2 = document.createElement("div")
+    card2.classList.add("card-2")
+
+    let profile2 = document.createElement("div")
+    profile2.classList.add("profile-2")
+
+    let img2 = document.createElement("img")
+    img2.setAttribute("src", inputs[0].value)
+
+    let name = document.createElement("h1")
+    name.textContent = inputs[1].value
+
+    let occupation = document.createElement("h2")
+    occupation.textContent = inputs[2].value
+
+    let email = document.createElement("h3")
+    email.textContent = inputs[3].value
+
+    let number = document.createElement("h3")
+    number.textContent = inputs[4].value
+
+    let p = document.createElement("p")
+    p.textContent = inputs[5].value
+
+    profile2.appendChild(img2)
+    card2.appendChild(profile2)
+    card2.appendChild(name)
+    card2.appendChild(occupation)
+    card2.appendChild(email)
+    card2.appendChild(number)
+    card2.appendChild(p)
+
+    formMain.appendChild(card2)
+})
+
+
