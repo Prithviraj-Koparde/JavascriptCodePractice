@@ -172,3 +172,66 @@ body {
     margin-top: 5px;
     font-size: 15px;
 }
+
+.mouseAnimation {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+}
+
+#square {
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+
+/* --------------------------------------------- */
+
+.bubbling {
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+}
+
+.bubbling #ul-div {
+    padding-left: 40px;
+    padding-top: 30px;
+    background-color: antiquewhite;
+    height: 200px;
+    width: 100%;
+}
+
+.bubbling #ul-div ul {
+    font-size: larger;
+    color: brown;
+}
+
+/* ------- class for toggle ------ */
+
+.line-through {
+    text-decoration: line-through;
+}
+
+/* --------------------------------------- */
+
+/* ----------------- character left counter------------------ */
+
+.character-counter {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(26, 24, 24);
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.character-counter input {
+    height: 30px;
+    width: 500px;
+    margin-bottom: 40px;
+    padding-left: 5px;
+}
+
+.character-counter h2 {
+    color: white;
+}
